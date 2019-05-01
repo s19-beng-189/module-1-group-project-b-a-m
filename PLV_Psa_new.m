@@ -10,10 +10,10 @@ B1=CLV_old*PLV_old+dt*(SMi/RMi)*PLA;
 B2=Csa*Psa_old;
 D=C11*C22-C12^2;
 PLV=(B1*C22-B2*C12)/D;
-if (r<5)
+if (r<7)
     Psa=(B2*C11-B1*C12)/D;
 else
-    Psa=(B2*C11-B1*C12)/(1.1*D);
+    Psa=(B2*C11-B1*C12)/(1.02*D);
 end
 
 if (CHECK)
