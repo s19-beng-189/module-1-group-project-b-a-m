@@ -30,9 +30,13 @@ end
 %plot results:
 figure(1)
 subplot(2,1,1), plot(t_plot,CLV_plot)
+title('Compliance(t)')
 subplot(2,1,2), plot(t_plot,PLV_plot,t_plot,Psa_plot)
+title('PLV(t) (blue) and Psa(t) (red)')
 figure(2)
 plot(t_plot,Vsa_plot)
+title('Volume(t)')
 figure(3)
 plot(t_plot,SMi_plot,t_plot,SAo_plot)
+title('SMi(t) (blue) and SAo(t) (red)')
 ylim([-0.1,1.1])
