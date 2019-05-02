@@ -4,6 +4,7 @@ clf       %and figures
 global T TS tauS tauD;
 global Csa Rs RMi RAo dt CHECK PLA;
 in_LV_sa  %initialize
+
 for klok=1:klokmax
   t=klok*dt;
   PLV_old=PLV;
@@ -28,19 +29,10 @@ for klok=1:klokmax
 end
 %plot results:
 figure(1)
-subplot(3,1,1), plot(t_plot,CLV_plot)
-subplot(3,1,2), plot(t_plot,PLV_plot,t_plot,Psa_plot)
-subplot(3,1,3), plot(t_plot,QMi_plot,t_plot,QAo_plot)
-%left ventricular pressure-volume loop
+subplot(2,1,1), plot(t_plot,CLV_plot)
+subplot(2,1,2), plot(t_plot,PLV_plot,t_plot,Psa_plot)
 figure(2)
-plot(VLV_plot,PLV_plot)
-%systemic arterial pressure-volume ``loop''
+plot(t_plot,Vsa_plot)
 figure(3)
-plot(Vsa_plot,Psa_plot)
-figure(4)
-subplot(1,2,1)
-plot(t_plot,SMi_plot)
-ylim([-0.1,1.1])
-subplot(1,2,2)
-plot(t_plot,SAo_plot)
+plot(t_plot,SMi_plot,t_plot,SAo_plot)
 ylim([-0.1,1.1])
